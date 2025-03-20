@@ -11,6 +11,20 @@
 		<script type="text/javascript" src="./file/jscex-async-powerpack.min.js"></script>
 		<script type="text/javascript" src="./file/functions.js" charset="utf-8"></script>
 		<script type="text/javascript" src="./file/love.js" charset="utf-8"></script>
+	    <script type="text/javascript">
+        window.onload = function(){
+            setInterval("toggleSound()",100);
+        }
+
+        function toggleSound() {
+            var music = document.getElementById("main");//获取ID
+
+            if (music.paused) { //判读是否播放
+                music.paused=false;
+                music.play(); //没有就播放
+            }
+        }
+    </script>
 	    <style type="text/css">
         </style>
 </head>
